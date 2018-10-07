@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kids App</string>
+    <string name="kids_app">Kids App</string>
+    <string name="choose_higher_number">Choose Higher Number!</string>
 </resources>

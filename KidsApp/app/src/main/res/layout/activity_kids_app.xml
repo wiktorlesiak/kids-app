@@ -7,9 +7,10 @@
     tools:context=".kids_app">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kids App"
+        android:text="@string/kids_app"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -17,5 +18,66 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058" />
+
+    <Button
+        android:id="@+id/button1"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="149dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="152dp"
+        android:onClick="onClickLeft"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMiddle" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@android:style/Widget.Material.Button.Colored"
+        android:layout_width="149dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="152dp"
+        android:onClick="onClickRight"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/textMiddle" />
+
+    <TextView
+        android:id="@+id/textMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="98dp"
+        android:text="@string/choose_higher_number"
+        android:textAppearance="@android:style/TextAppearance.Holo.Widget.PopupMenu.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textViewPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="84dp"
+        android:text="Points: 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
 </android.support.constraint.ConstraintLayout>
