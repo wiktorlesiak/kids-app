@@ -1,5 +1,7 @@
 package com.lesiak.wiktor.kidsapp;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,11 +25,59 @@ public class kids_app extends AppCompatActivity {
     private void newRandom(){
 
         if(count==10){
+            AlertDialog.Builder builder = new AlertDialog.Builder(kids_app.this);
 
-            Toast.makeText(this, "you won!", Toast.LENGTH_SHORT).show();
+            builder.setCancelable(true);
+            builder.setTitle("You Won!");
+            builder.setMessage("You just won the game of numbers!");
+
+
+            builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                            System.exit(0);
+                        }
+                    });
+            builder.setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            builder.show();
+
+
+
+                    Toast.makeText(this, "Congratulations!", Toast.LENGTH_SHORT).show();
             count =0;
 
-        }else {
+        }else if(count== -1) {
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(kids_app.this);
+
+            builder.setCancelable(true);
+            builder.setTitle("You Lost!");
+            builder.setMessage("You just lost the game of numbers :(  \n \n Don't give up and try again!");
+
+
+            builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                    System.exit(0);
+                }
+            });
+            builder.setPositiveButton("Play Again!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            });
+            builder.show();
+
+            count = 0;
+        }else{
 
 
         Random rand = new Random();
