@@ -14,4 +14,5 @@ when user wins the game a "You Win" pop up window is shown with Exit and Play Ag
 
 # Game Over
 When user goes scores -1 number a "You Lost" pop up window in shown.
+
 <img src="https://i.imgur.com/jRXOiZv.png" alt="preview" width="360" height="640">
